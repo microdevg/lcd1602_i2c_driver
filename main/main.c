@@ -50,20 +50,17 @@ void app_main(void)
 
     // Print a message
     lcd_set_cursor(&lcd, 0, 0);
-    lcd_print(&lcd, "Hello, ESP32!");
-    lcd_set_cursor(&lcd, 0, 1);
-    lcd_print(&lcd, "LCD Test");
-
+    lcd_print(&lcd, "Ejemplo I2C!");
+  
     int counter = 0;
     while (1) {
-        vTaskDelay(20 / portTICK_PERIOD_MS);  // Wait for 1 second
-
+        vTaskDelay(1000 / portTICK_PERIOD_MS);  // Wait for 1 second
         // Update the counter on the LCD
-        lcd_set_cursor(&lcd, 10, 1);
+        lcd_set_cursor(&lcd, 0, 1);
         char buffer[200];
-        sprintf(buffer,"hello world\n");
+        sprintf(buffer,"Contador:%d",counter);
         lcd_print(&lcd, buffer);
-
+        printf(buffer);
         counter++;
 
         // Reset counter to avoid display overflow
