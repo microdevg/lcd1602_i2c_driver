@@ -56,6 +56,9 @@ void app_main(void)
     while (1) {
         vTaskDelay(1000 / portTICK_PERIOD_MS);  // Wait for 1 second
         // Update the counter on the LCD
+        lcd_clear(&lcd);
+        lcd_set_cursor(&lcd, 0, 0);
+        lcd_print(&lcd, "Ejemplo I2C!");
         lcd_set_cursor(&lcd, 0, 1);
         char buffer[200];
         sprintf(buffer,"Contador:%d",counter);
