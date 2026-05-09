@@ -28,3 +28,7 @@ void i2c_master_init()
 
 ### Secuencias
 ![alt text]({0E6CAD73-3DDC-4FA0-990F-BD98206BA840}.png)
+
+### Pantalla
+
+![alt text](IMG_20260508_212059.jpg)
